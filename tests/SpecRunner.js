@@ -20,5 +20,7 @@ define([
 
   require([
     "tests/specs/index"
-  ], mocha.run);
+  ], function() {
+    mocha.run();
+  });
 });
