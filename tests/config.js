@@ -1,21 +1,38 @@
-var bitloader = Bitloader.config({
-  "baseUrl": "../",
-  "paths": {
-    "mocha": "node_modules/mocha/mocha",
-    "chai": "node_modules/chai/chai",
-    "cjs": "tests/lib/transforms/cjs",
-    "usestrict": "tests/lib/transforms/usestrict",
-    "print": "tests/lib/transforms/print",
-    "sourceurl": "tests/lib/transforms/sourceurl"
-  },
-  "shim": {
-    "mocha": {
-      "exports": "mocha"
-    }
-  },
-  "transforms": ["print"],
-  "urlArgs": 'bust=' + (new Date()).getTime()
-});
+var require = (function() {
+  "use strict";
 
-var define  = bitloader.define;
-var require = bitloader.require;
+  var importer = Bitimporter.config({
+    "baseUrl": "../",
+    "paths": {
+      "mocha": "node_modules/mocha/mocha",
+      "chai": "node_modules/chai/chai",
+      "usestrict": "tests/lib/transforms/usestrict",
+      "print": "tests/lib/transforms/print",
+      "sourceurl": "tests/lib/transforms/sourceurl"
+    },
+    "shim": {
+      "mocha": {
+        "exports": "mocha"
+      }
+    },
+    "transforms": [
+      {
+        name: "ignore",
+        handler: ignore,
+        ignore:["chai"]
+      }, {
+        name: "print"
+      }
+    ]
+  });
+
+  /**
+   * Simple filter for excluding particular modules from being processed by the transformation pipeline.
+   */
+  function ignore(moduleMeta) {
+    var ignoreList = this.ignore;
+    return !(ignoreList && ignoreList.length && ignoreList.indexOf(moduleMeta.name) !== -1);
+  }
+
+  return importer.require;
+})();
