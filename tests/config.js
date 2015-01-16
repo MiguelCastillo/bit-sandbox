@@ -16,9 +16,10 @@ var require = (function() {
     },
     "transforms": [
       {
-        name: "ignore",
         handler: ignore,
         ignore:["chai"]
+      }, {
+        name: "usestrict"
       }, {
         name: "print"
       }
