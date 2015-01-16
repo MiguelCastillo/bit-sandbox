@@ -1,4 +1,4 @@
 sample-transforms
 =================
 
-Transformation examples for bit-loader via amd-bits
+Sandbox for authoring and testing transforms for `bit-imports`
