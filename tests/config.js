@@ -1,5 +1,4 @@
 var require = (function() {
-  "use strict";
 
   var importer = Bitimports.config({
     "baseUrl": "../",
