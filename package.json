@@ -1,5 +1,5 @@
 {
-  "name": "sample-transforms",
+  "name": "bit-transforms-sandbox",
   "version": "0.0.1",
   "description": "Sandbox for authoring and testing transforms for `bit-imports`",
   "main": "index.js",
