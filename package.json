@@ -1,7 +1,7 @@
 {
   "name": "sample-transforms",
   "version": "0.0.1",
-  "description": "Sandbox for authoring and testing transforms from `bit-imports`",
+  "description": "Sandbox for authoring and testing transforms for `bit-imports`",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
