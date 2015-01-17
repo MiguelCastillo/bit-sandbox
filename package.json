@@ -19,7 +19,8 @@
     "grunt-contrib-watch": "~0.6.1",
     "jshint-stylish": "~1.0.0",
     "grunt-contrib-jshint": "~0.10.0",
-    "grunt-concurrent": "~1.0.0"
+    "grunt-concurrent": "~1.0.0",
+    "6to5-core": "~2.12.6"
   },
   "browser": {},
   "directories": {

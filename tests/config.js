@@ -7,6 +7,7 @@ var require = (function() {
       "chai": "node_modules/chai/chai",
       "usestrict": "tests/lib/transforms/usestrict",
       "print": "tests/lib/transforms/print",
+      "6to5": "tests/lib/transforms/6to5",
       "sourceurl": "tests/lib/transforms/sourceurl"
     },
     "shim": {
@@ -17,11 +18,13 @@ var require = (function() {
     "transforms": [
       {
         handler: ignore,
-        ignore:["chai"]
+        ignore:["chai", "6to5"]
       }, {
         name: "usestrict"
       }, {
         name: "print"
+      }, {
+        name: "6to5"
       }
     ]
   });

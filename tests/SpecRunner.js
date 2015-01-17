@@ -8,7 +8,8 @@ mocha.setup("bdd");
 
 require([
   "tests/specs/amd",
-  "tests/specs/cjs"
+  "tests/specs/cjs",
+  "tests/specs/6class"
 ], function() {
   mocha.run();
 });
