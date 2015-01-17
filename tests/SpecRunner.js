@@ -9,7 +9,8 @@ mocha.setup("bdd");
 require([
   "tests/specs/amd",
   "tests/specs/cjs",
-  "tests/specs/6class"
+  "tests/specs/6import-sayhi",
+  "tests/specs/6export-class"
 ], function() {
   mocha.run();
 });

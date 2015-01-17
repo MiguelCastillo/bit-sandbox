@@ -22,9 +22,9 @@ var require = (function() {
       }, {
         name: "usestrict"
       }, {
-        name: "print"
-      }, {
         name: "6to5"
+      }, {
+        name: "print"
       }
     ]
   });

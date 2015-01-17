@@ -1,6 +1,6 @@
-var sayhi = require("tests/js/sayhi6");
+var sayhi = require("tests/js/6export-class");
 
-describe("Class Export - Say Hi Test suite", function() {
+describe("ES6 Class Export - Test suite", function() {
   it("first is `Brian`", function() {
     expect(sayhi.first).to.equal("Brian");
   });
