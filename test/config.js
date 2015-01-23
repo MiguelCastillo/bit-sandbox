@@ -5,10 +5,10 @@ var require = (function() {
     "paths": {
       "mocha": "node_modules/mocha/mocha",
       "chai": "node_modules/chai/chai",
-      "usestrict": "tests/lib/transforms/usestrict",
-      "print": "tests/lib/transforms/print",
-      "6to5": "tests/lib/transforms/6to5",
-      "sourceurl": "tests/lib/transforms/sourceurl"
+      "usestrict": "test/lib/transforms/usestrict",
+      "print": "test/lib/transforms/print",
+      "6to5": "test/lib/transforms/6to5",
+      "sourceurl": "test/lib/transforms/sourceurl"
     },
     "shim": {
       "mocha": {

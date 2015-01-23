@@ -1,4 +1,4 @@
-var sayhi = require("tests/js/6export-class");
+var sayhi = require("test/js/6export-class");
 
 describe("ES6 Class Export - Test suite", function() {
   it("first is `Brian`", function() {

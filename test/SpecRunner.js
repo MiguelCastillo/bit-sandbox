@@ -7,10 +7,10 @@ window.assert = chai.assert;
 mocha.setup("bdd");
 
 require([
-  "tests/specs/amd",
-  "tests/specs/cjs",
-  "tests/specs/6import-sayhi",
-  "tests/specs/6export-class"
+  "test/spec/amd",
+  "test/spec/cjs",
+  "test/spec/6import-sayhi",
+  "test/spec/6export-class"
 ], function() {
   mocha.run();
 });

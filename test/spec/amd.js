@@ -1,4 +1,4 @@
-define(["tests/js/sayhi"], function(sayhi) {
+define(["test/js/sayhi"], function(sayhi) {
 
   describe("AMD - Say Hi Test suite", function() {
     it("Add your tests right here", function() {

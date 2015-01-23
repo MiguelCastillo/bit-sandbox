@@ -16,7 +16,7 @@ module.exports = function(grunt) {
           port: 8919,
           host: "localhost",
           keepalive: true,
-          open: "http://localhost:8919/tests/SpecRunner.html"
+          open: "http://localhost:8919/test/SpecRunner.html"
         }
       }
     },
@@ -28,13 +28,13 @@ module.exports = function(grunt) {
           reporter: "Spec",
           run: false,
           timeout: 10000,
-          urls: ["http://localhost:8912/tests/SpecRunner.html"]
+          urls: ["http://localhost:8912/test/SpecRunner.html"]
         }
       }
     },
     watch: {
       test: {
-        files: ['tests/**/*.js', '*.js'],
+        files: ['src/**/*.js', 'test/**/*.js', '*.js'],
         tasks: ['jshint:all'],
         options: {
           livereload: true
@@ -46,7 +46,7 @@ module.exports = function(grunt) {
         options: {
           reporter: require('jshint-stylish')
         },
-        src: ['tests/**/*.js', '*.js']
+        src: ['src/**/*.js', 'test/**/*.js', '*.js']
       }
     },
     concurrent: {
@@ -64,6 +64,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks("grunt-contrib-connect");
   grunt.loadNpmTasks("grunt-contrib-watch");
   grunt.loadNpmTasks("grunt-contrib-jshint");
+
   grunt.registerTask("server", ["connect:keepalive"]);
   grunt.registerTask("test", ["connect:test", "mocha:test"]);
   grunt.registerTask("livereload", ["concurrent:test"]);
