@@ -4,7 +4,7 @@
   "description": "Sandbox for authoring and testing transforms for `bit-imports`",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "grunt test"
   },
   "author": "Miguel Castillo <manchagnu@gmail.com>",
   "license": "MIT",
@@ -20,7 +20,7 @@
     "jshint-stylish": "~1.0.0",
     "grunt-contrib-jshint": "~0.10.0",
     "grunt-concurrent": "~1.0.0",
-    "6to5-core": "~2.12.6"
+    "6to5-bits": "~0.0.5"
   },
   "browser": {},
   "directories": {

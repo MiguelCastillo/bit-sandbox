@@ -3,6 +3,7 @@
   "unused":true,
   "curly":true,
   "indent":2,
+  "esnext": true,
   "devel":true,
   "browser": true,
   "globals":{

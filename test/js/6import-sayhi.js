@@ -1,2 +1,2 @@
-var sayhi = "Say Hi";
+var sayhi = "Say Hi 6";
 export default sayhi;

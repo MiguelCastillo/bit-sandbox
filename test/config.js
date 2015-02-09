@@ -7,7 +7,7 @@ var require = (function() {
       "chai": "node_modules/chai/chai",
       "usestrict": "test/lib/transforms/usestrict",
       "print": "test/lib/transforms/print",
-      "6to5": "test/lib/transforms/6to5",
+      "6to5": "node_modules/6to5-bits/dist/index",
       "sourceurl": "test/lib/transforms/sourceurl"
     },
     "shim": {
