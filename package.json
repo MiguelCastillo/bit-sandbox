@@ -11,16 +11,15 @@
   "devDependencies": {
     "grunt": "~0.4.5",
     "mocha": "~2.1.0",
-    "browserify": "~8.0.3",
     "chai": "~1.10.0",
+    "bit-imports": "~0.1.0",
     "grunt-contrib-connect": "~0.9.0",
     "grunt-mocha": "~0.4.11",
-    "bit-imports": "",
     "grunt-contrib-watch": "~0.6.1",
     "jshint-stylish": "~1.0.0",
     "grunt-contrib-jshint": "~0.10.0",
     "grunt-concurrent": "~1.0.0",
-    "6to5-bits": "~0.0.5"
+    "babel-bits": "0.0.7"
   },
   "browser": {},
   "directories": {

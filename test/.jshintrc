@@ -7,7 +7,7 @@
   "devel":true,
   "globals":{
     "require": true,
-    "Bitimports": true,
+    "bitimports": true,
     "window": true,
     "describe": true,
     "mocha": true,

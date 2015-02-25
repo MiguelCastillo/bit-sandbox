@@ -1,13 +1,12 @@
-var require = (function() {
-
-  var importer = Bitimports.config({
+var System = (function() {
+  var importer = bitimports.config({
     "baseUrl": "../",
     "paths": {
       "mocha": "node_modules/mocha/mocha",
       "chai": "node_modules/chai/chai",
       "usestrict": "test/lib/transforms/usestrict",
       "print": "test/lib/transforms/print",
-      "6to5": "node_modules/6to5-bits/dist/index",
+      "babel": "node_modules/babel-bits/dist/index",
       "sourceurl": "test/lib/transforms/sourceurl"
     },
     "shim": {
@@ -17,15 +16,11 @@ var require = (function() {
     },
     "transforms": [
       {
+        name: "ignore",
         handler: ignore,
-        ignore:["chai", "6to5"]
-      }, {
-        name: "usestrict"
-      }, {
-        name: "6to5"
-      }, {
-        name: "print"
-      }
+        ignore:["chai", "babel"]
+      },
+      "usestrict", "babel", "print"
     ]
   });
 
@@ -37,5 +32,5 @@ var require = (function() {
     return !(ignoreList && ignoreList.length && ignoreList.indexOf(moduleMeta.name) !== -1);
   }
 
-  return importer.require;
+  return importer;
 })();
