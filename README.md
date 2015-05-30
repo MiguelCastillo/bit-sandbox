@@ -18,5 +18,10 @@ Open up your dev tools to see what the code looks like in the browser with sourc
 
 > If you are using Chrome, you can take a peek in `(no domain)` in the Sources tab to see the raw source without source maps applied.
 
-<img src="https://raw.githubusercontent.com/MiguelCastillo/bit-sandbox/master/img/sources.png" alt="Sources with and without source maps"></img>
-<img src="https://raw.githubusercontent.com/MiguelCastillo/bit-sandbox/master/img/no-domain.png" alt="Raw modules with source maps"></img>
+<p>
+<img src="https://raw.githubusercontent.com/MiguelCastillo/bit-sandbox/master/img/no-domain.png" alt="Raw modules with source maps" width='200px'></img>
+</p>
+
+<p>
+<img src="https://raw.githubusercontent.com/MiguelCastillo/bit-sandbox/master/img/sources.png" alt="Sources with and without source maps" width='200px'></img>
+</p>
