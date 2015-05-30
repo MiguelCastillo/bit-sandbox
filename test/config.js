@@ -1,3 +1,4 @@
+/* jshint unused: false */
 var System = (function() {
   var importer = bitimports.config({
     "baseUrl": "../",
@@ -13,24 +14,24 @@ var System = (function() {
       "mocha": {
         "exports": "mocha"
       }
-    },
-    "transforms": [
-      {
-        name: "ignore",
-        handler: ignore,
-        ignore:["chai", "babel"]
-      },
-      "usestrict", "babel", "print"
-    ]
+    }
   });
 
-  /**
-   * Simple filter for excluding particular modules from being processed by the transformation pipeline.
-   */
-  function ignore(moduleMeta) {
-    var ignoreList = this.ignore;
-    return !(ignoreList && ignoreList.length && ignoreList.indexOf(moduleMeta.name) !== -1);
-  }
+
+  importer.ignore({
+    match: ["chai", "babel", "usestrict", "print"]
+  });
+
+  importer.plugin("js", {
+    transform: [
+      "usestrict", {
+        handler: "babel",
+        options: {
+          sourceMaps: "inline"
+        }
+      }, "print"
+    ]
+  });
 
   return importer;
 })();
