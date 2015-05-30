@@ -24,5 +24,8 @@
   "browser": {},
   "directories": {
     "test": "tests"
+  },
+  "dependencies": {
+    "spromise": "^0.9.3"
   }
 }
