@@ -22,9 +22,7 @@ var System = (function() {
   });
 
 
-  importer.ignore({
-    match: ["chai"]
-  });
+  importer.ignore("chai");
 
   importer.plugin("js", {
     transform: [
